@@ -1,0 +1,17 @@
+﻿@model List<EmployeeTem>
+    <div class="card-deck">
+        @foreach (var models in Model)
+        {
+            <div class="card m-2">
+                <div class="card-header">
+                @models.Name
+                </div>
+                <img class="card-img-top" src="~/images/epm.jpg"/>
+                <div class="card-footer text-center">
+                    <a asp-action="edit" asp-controller="home" class="btn btn-primary" asp-route-id="@models.Id">Edit</a>
+                    <a asp-action="viewEmployee" asp-controller="home" class="btn btn-primary" asp-route-id="@models.Id">View</a>
+                    <a asp-action="deleteEmployee" asp-controller="home" class="btn btn-primary" asp-route-id="@models.Id">Delete</a>
+                </div>
+            </div>
+        }
+    </div>

@@ -1,0 +1,19 @@
+﻿@model EmployeeTem
+<div class="card-deck">
+    <div class="card m-3">
+        <div class="card-header">
+            <div>Name:@Model.Name</div>
+        </div>
+        <img class="card-img-top" src="~/images/epm.jpg" />
+        <div>Id:@Model.Id</div>
+        <div>LastName:@Model.Lastname</div>
+        <div>Department:@Model.Department</div>
+        <div>Roles:@Model.Roles</div>
+        <br />
+        <div class="card-footer text-center">
+            <a asp-controller="home" class="btn btn-primary" asp-action="edit" asp-route-id="@Model.Id">Edit</a>
+            <a asp-controller="home" class="btn btn-primary" asp-action="index" asp-route-id="@Model.Id">Back</a>
+            <a asp-controller="home" asp-action="deleteEmployee" class="btn btn-primary" asp-route-id="@Model.Id" >Delete</a>
+        </div>
+    </div>
+</div>
